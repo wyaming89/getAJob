@@ -24,4 +24,3 @@ docker pull mongo
 ### 接下来……
 
 - 前台数据可视化 flask + Vue + echarts
-- 数据处理组件 spark
