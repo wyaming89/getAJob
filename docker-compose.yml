@@ -1,0 +1,17 @@
+version: '1.0'
+services:
+  mongodb:
+    image: mongo
+
+  splash:
+    image: scrapinghub/splash
+
+  scrapy:
+    build: .
+    command: scrapy crawl lagou
+    volumes:
+      - .:/code
+    depends_on:
+      - mongo
+      - splash
+    
