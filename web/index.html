@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type='text/javascript' src="./static/js/vue.min.js"></script>
+        <!-- 引入样式 -->
+        <link rel="stylesheet" href="./static/css/index.css">
+        <!-- 引入组件库 -->
+        <script src="./static/js/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/echarts@4.1.0/dist/echarts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-echarts@4.0.2"></script>
+        <link rel="stylesheet" type="text/css" href="./static/css/main.css" />
+        
+    </head>
+    <body>
+        <div id="app">
+            <el-container>
+                <el-header class='header'>
+                    <el-row>
+                        <el-col :span="24" >
+                            <div class="head-wrap">Element</div>
+                        </el-col>
+                    </el-row>
+                </el-header>
+                <el-container >
+                    <el-aside width="200px">
+                        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
+                            background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+                            <el-menu-item index="1">
+                                <i class="el-icon-menu"></i>
+                                <span slot="title">导航二</span>
+                            </el-menu-item>
+                            <el-menu-item index="2">
+                                <i class="el-icon-menu"></i>
+                                <span slot="title">导航二</span>
+                            </el-menu-item>
+                            <el-menu-item index="3" >
+                                <i class="el-icon-document"></i>
+                                <span slot="title">导航三</span>
+                            </el-menu-item>
+                            <el-menu-item index="4">
+                                <i class="el-icon-setting"></i>
+                                <span slot="title">导航四</span>
+                            </el-menu-item>
+                        </el-menu>
+                    </el-aside>
+                    <el-main>
+                        <div id='echt' style="width: 100%; height:400px">
+
+                        </div>
+                    </el-main>
+                </el-container>
+            </el-container>
+        </div>
+    </body>
+    <script type='text/javascript' src="main.js"></script>
+</html>
