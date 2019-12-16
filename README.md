@@ -10,13 +10,13 @@
 
 - 推荐使用docker-compose
 
-~~~
+~~~ bash
 docker-compose up -d
 ~~~
 
 - 非docker方式
 
-~~~ 
+~~~ bash
 pip install -r requirements.txt
 # 对于BXXX网站需使用splash
 docker pull scrapinghub/splash
@@ -26,6 +26,10 @@ docker pull mongo
 
 ~~~
 
-### 接下来……
+## 2019.12.16
 
-- 前台数据可视化 flask + Vue + echarts
+- flask+Vue+pyecharts可视化
+
+## 接下来……
+
+- 用sparkstreaming实现准实时分析
