@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Page Title</title>
+        <title>数据虫</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./pic.ico">
         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,6 +15,7 @@
         <script src="./static/js/index.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/echarts@4.1.0/dist/echarts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue-echarts@4.0.2"></script>
+        <script src="./static/js/china.js"></script>
         <link rel="stylesheet" type="text/css" href="./static/css/main.css" />
         
     </head>
@@ -23,34 +25,51 @@
                 <el-header class='header'>
                     <el-row>
                         <el-col :span="24" >
-                            <div class="head-wrap">Element</div>
+                            <div class="head-wrap">DataInsect</div>
                         </el-col>
                     </el-row>
                 </el-header>
                 <el-container >
-                    <el-aside width="200px">
-                        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose"
-                            background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+                    <el-aside width="180px">
+                        <el-menu default-active="2" class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff"
+                            active-text-color="#ffd04b">
                             <el-menu-item index="1">
-                                <i class="el-icon-menu"></i>
-                                <span slot="title">导航二</span>
+                                <i class="el-icon-s-home"></i>
+                                <span slot="title">OverView</span>
                             </el-menu-item>
-                            <el-menu-item index="2">
-                                <i class="el-icon-menu"></i>
-                                <span slot="title">导航二</span>
-                            </el-menu-item>
-                            <el-menu-item index="3" >
-                                <i class="el-icon-document"></i>
-                                <span slot="title">导航三</span>
-                            </el-menu-item>
-                            <el-menu-item index="4">
-                                <i class="el-icon-setting"></i>
-                                <span slot="title">导航四</span>
+                            <el-submenu index="2">
+                                <template slot="title">
+                                    <i class="el-icon-document"></i>
+                                    <span>DetailData</span>
+                                </template>
+                                <el-menu-item-group>
+                                <el-menu-item v-for="(item, i) in items" :key='item.key'  @click='getindu(item.key)'>{{item.name}}</el-menu-item>
+                                </el-menu-item-group>
+                            </el-submenu>
+                            <el-menu-item index="3">
+                                <i class="el-icon-cloudy"></i>
+                                <span slot="title">WordCloud</span>
                             </el-menu-item>
                         </el-menu>
                     </el-aside>
-                    <el-main>
-                        <div id='echt' style="width: 100%; height:400px">
+                    <el-main style="height: 100%;">
+                        <el-row :gutter="24" justify="space-between" style="height: 40%;">
+                            <el-col :span="8" style="height: 100%;">
+                                <div class="grid-content bg-purple" id='part1' style="height: 100%;"></div>
+                            </el-col>
+                            <el-col :span="8" style="height: 100%;">
+                                <div class="grid-content bg-purple" id='part2' style="height: 100%;"></div>
+                            </el-col>
+                            <el-col :span="8" style="height: 100%;">
+                                <div class="grid-content bg-purple" id='part3' style="height: 100%;"></div>
+                            </el-col>
+                        </el-row>
+                        <el-row :gutter="24" justify="space-between" style="height:55%; margin-top: 20px;">
+                            <el-col :span="24" justify='center' style="height: 100%;">
+                                <div class="grid-content bg-purple" id='part4' style="height: 100%;"></div>
+                            </el-col>
+                        </el-row>
+                        
 
                         </div>
                     </el-main>
@@ -59,4 +78,5 @@
         </div>
     </body>
     <script type='text/javascript' src="main.js"></script>
+
 </html>

@@ -1,13 +1,13 @@
 .el-header, .el-footer {
     background-color: #B3C0D1;
     color: #333;
-    text-align: center;
+    text-align: left;
     line-height: 60px;
   }
   
   .el-aside {
     color: #333;
-    text-align: center;
+    text-align: left;
     line-height: 200px;
   }
   
@@ -20,14 +20,18 @@
   
   body > .el-container {
     margin-bottom: 0;
-    height: 200px;
+    height: 100%;
   }
   
   
 
-body {
+
+#app, html,body, .el-container {
     margin: 0;
+    padding: 0;
+    height: 100%;
 }
+
 
 .header {
   background-color: #409EFF;
@@ -36,7 +40,7 @@ body {
 }
 
 .el-aside {
-    min-height: 800px;
+    min-height: 100%;
 }
 .el-menu {
     height: 100%;
