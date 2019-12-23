@@ -2,6 +2,8 @@
 
 ## 介绍
 
+<img src="./pic.jpg" >
+
 - 使用scrapy spider 爬取某网站全国数据分析岗位信息，MongoDB作为数据库
 - 另外一网站页面由js跳转，使用splash处理js加载
 - 另外 3、4网站ing……
