@@ -12,7 +12,7 @@ jupyter-latex-envs==1.4.6
 jupyter-nbextensions-configurator==0.4.1
 jupyterlab==1.0.3
 jupyterlab-server==1.0.0
-numpy==1.16.4
+numpy==1.22.0
 pandas==0.25.1
 pycharts==0.1.5
 pymongo==3.8.0
